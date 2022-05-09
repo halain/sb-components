@@ -1,9 +1,9 @@
+/// <reference types="react" />
 import './mylabel.css';
-
- export interface MyLabelProps {
-     /**
-      * The label text
-      */
+export interface MyLabelProps {
+    /**
+     * The label text
+     */
     label: string;
     /**
      * The label size
@@ -17,32 +17,13 @@ import './mylabel.css';
      * The label color
      */
     color?: 'primary' | 'secondary' | 'tertiary';
-    
     /**
      * The label custom font color
      */
     fontColor?: string;
-
     /**
      * The label background color
      */
     backgroundColor?: string;
-    
 }
-
-export const MyLabel = ({
-    allCaps = false,
-    color = 'primary',
-    label = 'No label',
-    size= 'normal',
-    fontColor,
-    backgroundColor
-}: MyLabelProps) => {
-
-   
-  return (
-    <span className={`label ${size} text-${color}`} style={{color: fontColor, backgroundColor}} >
-        {allCaps ? label.toUpperCase() : label}
-    </span>
-  )
-}
+export declare const MyLabel: ({ allCaps, color, label, size, fontColor, backgroundColor }: MyLabelProps) => JSX.Element;
